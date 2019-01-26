@@ -2,9 +2,9 @@
 MXNet框架下所有的迭代器都要继承基类:mx.io.DataIter。
 
 DataDesc类：用来存储数据或标签的名称、形状、数据格式和布局，格式为[(name, shape, dtype, layout),(name, shape, dtype, layout),...],如data =
-[(data, (8, 3, 298, 298),<class 'numpy.float32'>,'NCHW')],
-单标签时，返回如：label = [('softmax_plate1_label', (8,),<class 'numpy.float32'>,'NCHW')]
-多标签时，返回如：label = [('softmax_plate1_label', (8,),<class 'numpy.float32'>,'NCHW')，('softmax_plate2_label', (8,),
-<class 'numpy.float32'>,'NCHW')]
+[(data, (8, 3, 298, 298),<class 'numpy.float32'>,NCHW)],
+单标签时，返回如：label = [(softmax_plate1_label, (8,),<class 'numpy.float32'>,NCHW)]
+多标签时，返回如：label = [(softmax_plate1_label, (8,),<class 'numpy.float32'>,NCHW)，(softmax_plate2_label, (8,),
+<class 'numpy.float32'>,NCHW)]
 DataBatch:真正返回一个批量的数据或标签。需要调用两个属性data和label，就会得到其数据和标签。含有方法next(),每调用一次next(),返回下一个批量，也是
 DataBatch类。
