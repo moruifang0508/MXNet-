@@ -8,7 +8,6 @@ DataDesc类：用来存储数据或标签的名称、形状、数据格式和布
     - 如data =[('data', (8, 3, 298, 298),<class 'numpy.float32'>,NCHW)],
     - 单标签时，返回如：label = [(softmax_plate1_label, (8,),<class 'numpy.float32'>,NCHW)]
     - 多标签时，返回如：label = [(softmax_plate1_label, (8,),<class 'numpy.float32'>,NCHW)， (softmax_plate2_label, (8,),
-<class 'numpy.float32'>,NCHW)]
-
+      <class 'numpy.float32'>,NCHW)]
 
 DataBatch类:数据迭代器调用方法next（）后返回类，可真正返回一个批量的数据或标签。需要调用两个属性data和label，就会得到其数据和标签。
